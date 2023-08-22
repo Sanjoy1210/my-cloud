@@ -1,4 +1,19 @@
 import "./styles/main.scss";
 import "./styles/media.scss";
 import "./fonts/sofia-pro/fonts.scss";
-console.log("My Cloud");
+
+
+// dropdown menu
+const user = document.getElementById("user-info");
+const dropdown = document.getElementById("user-dropdown");
+
+function handleToggleDropdown() {
+  if (dropdown.classList.contains('active')) {
+    dropdown.classList.remove("active");
+  }
+  else {
+    dropdown.classList.add("active");
+  }
+}
+
+user.addEventListener("click", handleToggleDropdown);

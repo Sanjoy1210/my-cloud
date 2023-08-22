@@ -3,7 +3,7 @@
 
 @media screen and (min-width: 540px) {
   .container {
-    max-width: 520px;
+    // max-width: 520px;
   }
 
   .header {
@@ -25,13 +25,13 @@
 
 @media screen and (min-width: 640px) {
   .container {
-    max-width: 610px;
+    // max-width: 610px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 750px;
+    // max-width: 750px;
     padding: 0 auto;
   }
 
@@ -58,7 +58,7 @@
 
 @media screen and (min-width: 1024px) {
   .container {
-    max-width: 1000px;
+    // max-width: 1000px;
   }
 
   .header {
@@ -69,6 +69,10 @@
       }
       .user-area {
         gap: 30px;
+
+        .user-dropdown {
+          left: -20%;
+        }
       }
     }
   }
@@ -76,17 +80,25 @@
 
 @media screen and (min-width: 1280px) {
   .container {
-    max-width: 1250px;
+    // max-width: 1280px;
+    padding: 0 20px;
   }
 
   .header {
     .header-area {
       gap: 60px;
+      .logo {
+        padding-left: 22px;
+      }
       .user-area {
         .user-info {
           .user-details {
             display: flex;
           }
+        }
+
+        .user-dropdown {
+          left: -8%;
         }
       }
     }
@@ -96,6 +108,7 @@
 @media screen and (min-width: 1400px) {
   .container {
     max-width: 1350px;
+    margin: 0 auto;
   }
 
   .header {
@@ -116,6 +129,10 @@
         }
       }
     }
+  }
+
+  .left-part {
+    height: auto;
   }
 }
 
