@@ -17,3 +17,13 @@ function handleToggleDropdown() {
 }
 
 user.addEventListener("click", handleToggleDropdown);
+
+// drawer toggle
+window.addEventListener("click", event => {
+  
+  if(event.target.className == "drawer-btn" || event.target.className == "toggle") {
+    document.body.classList.toggle("show");
+  } else if (event.target.className == "overlay") {
+    document.body.classList.remove("show");
+  }
+});
