@@ -161,10 +161,15 @@
   .left-part {
     max-width: 220px;
 
-    // .left-part-area {
-    //   height: 380px;
-    //   overflow: auto;
-    // }
+    .left-part-area {
+      // height: 380px;
+      // overflow: auto;
+      .bottom-menu {
+        gap: 30px;
+        padding-top: 60px;
+        padding-bottom: 115px;
+      }
+    }
 
     .menu {
       .menu-icon {
@@ -230,13 +235,14 @@
         height: 60px;
         font-size: 24px;
         border-radius: 10px;
-        &:hover {
-          .menu-icon {
-            &::before {
-              right: -15px;
-              width: 40px;
-              height: 40px;
-            }
+      }
+      &:hover {
+        .menu-icon {
+          &::before {
+            top: -15px;
+            right: -15px;
+            width: 40px;
+            height: 40px;
           }
         }
       }

@@ -52,17 +52,23 @@ ul {
 }
 
 // scrollbar
+// ::-webkit-scrollbar {
+//   display: none;
+// }
+
 .scrollbar::-webkit-scrollbar {
   width: 3px;
+  height: 3px;
 }
 
 .scrollbar::-webkit-scrollbar-track {
-  background: transparent;
+  background: #ddd;
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-  background: $light-gray;
-  border-radius: 20px;
+  overflow-y: auto;
+  scrollbar-color: $light-gray #ddd;
+  scrollbar-width: 3px;
 
   &:hover {
     background: $bright-gray;
@@ -129,6 +135,14 @@ ul {
     justify-content: center;
     cursor: pointer;
   }
+}
+
+.section-title {
+  font-family: "Sofia Pro";
+  font-size: 19px;
+  font-weight: 500;
+  color: $primary-color;
+  margin-bottom: 20px;
 }
 
 /* ============== header style start ============= */
@@ -392,6 +406,11 @@ ul {
 }
 /* ============== drawer style end ============== */
 
+/* ============== main section style start ============== */
+.main .container {
+  display: flex;
+}
+
 /* ============== left side bar style start ============== */
 .left-part {
   display: none;
@@ -523,3 +542,281 @@ ul {
   }
 }
 /* ============== left side bar style end ============== */
+
+/* ============== middle part style start =============== */
+.middle-content {
+  max-width: 800px;
+  width: 100%;
+  padding: 30px 0 30px 30px;
+
+  .middle-content-area {
+    /* =========== folders style start ============== */
+    .folders {
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      gap: 25px;
+      // overflow-x: scroll;
+      padding-bottom: 60px;
+
+      .folder {
+        min-width: 193px;
+        width: 100%;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 10px;
+
+        .folder-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .folder-footer {
+          font-family: "Sofia Pro";
+          font-weight: 500;
+          .folder-title {
+            display: inline-block;
+            font-size: 18px;
+            margin-bottom: 15px;
+          }
+          .folder-contains {
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+      }
+
+      .blue-folder {
+        background: #f6f5ff;
+        box-shadow: 0px 1.8518518209457397px 3.1481480598449707px 0px
+            rgba(158, 160, 249, 0.02),
+          0px 8.148148536682129px 6.518518447875977px 0px
+            rgba(158, 160, 249, 0.03),
+          0px 20px 13px 0px rgba(158, 160, 249, 0.04),
+          0px 38.51852035522461px 25.481481552124023px 0px
+            rgba(158, 160, 249, 0.04),
+          0px 64.81481170654297px 46.85185241699219px 0px
+            rgba(158, 160, 249, 0.05),
+          0px 100px 80px 0px rgba(158, 160, 249, 0.07);
+      }
+      .green-folder {
+        background: #f5fffc;
+        box-shadow: 0px 1.8518518209457397px 3.1481480598449707px 0px
+            rgba(103, 207, 236, 0.02),
+          0px 8.148148536682129px 6.518518447875977px 0px
+            rgba(103, 207, 236, 0.03),
+          0px 20px 13px 0px rgba(103, 207, 236, 0.04),
+          0px 38.51852035522461px 25.481481552124023px 0px
+            rgba(103, 207, 236, 0.04),
+          0px 64.81481170654297px 46.85185241699219px 0px
+            rgba(103, 207, 236, 0.05),
+          0px 100px 80px 0px rgba(103, 207, 236, 0.07);
+      }
+      .yellow-folder {
+        background: #fff9f0;
+        box-shadow: 0px 1.8518518209457397px 3.1481480598449707px 0px
+            rgba(253, 131, 66, 0.01),
+          0px 8.148148536682129px 6.518518447875977px 0px
+            rgba(253, 131, 66, 0.02),
+          0px 20px 13px 0px rgba(253, 131, 66, 0.02),
+          0px 38.51852035522461px 25.481481552124023px 0px
+            rgba(253, 131, 66, 0.02),
+          0px 64.81481170654297px 46.85185241699219px 0px
+            rgba(253, 131, 66, 0.03),
+          0px 100px 80px 0px rgba(253, 131, 66, 0.04);
+      }
+      .red-folder {
+        background: #fff5f5;
+        box-shadow: 0px 1.8518518209457397px 3.1481480598449707px 0px
+            rgba(255, 125, 125, 0.02),
+          0px 8.148148536682129px 6.518518447875977px 0px
+            rgba(255, 125, 125, 0.03),
+          0px 20px 13px 0px rgba(255, 125, 125, 0.04),
+          0px 38.51852035522461px 25.481481552124023px 0px
+            rgba(255, 125, 125, 0.04),
+          0px 64.81481170654297px 46.85185241699219px 0px
+            rgba(255, 125, 125, 0.05),
+          0px 100px 80px 0px rgba(255, 125, 125, 0.07);
+      }
+    }
+    /* =========== folders style end ============== */
+
+    /* =========== quick access style start ============ */
+    .quick-access {
+      margin-bottom: 60px;
+      .quick-access-area {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        .access {
+          max-width: 226px;
+          width: 100%;
+          position: relative;
+          cursor: pointer;
+          overflow: hidden;
+
+          .access-img {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 15px;
+          }
+
+          .access-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 25px;
+            border-radius: 0px 0px 15px 15px;
+            background: #f5f5f5;
+            position: absolute;
+            width: 100%;
+            right: 0;
+            bottom: 0;
+
+            .access-icon {
+              font-size: 22px;
+              margin-right: 10px;
+            }
+
+            .access-title {
+              font-family: "DM Sans", sans-serif;
+              font-size: 13px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+    /* =========== quick access style end ============ */
+
+    /* ============== file container style start =============== */
+    .upload-manage {
+      width: 710px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 85px;
+      // align-items: center;
+      // justify-content: space-between;
+      // recently uploaded
+      .recently-uploaded {
+        width: 100%;
+        .uploaded-files {
+          display: flex;
+          flex-direction: column;
+          gap: 17px;
+          .upload-file {
+            display: flex;
+            align-items: center;
+
+            .upload-img {
+              width: 44px;
+              height: 44px;
+            }
+            .upload {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-family: "Sofia Pro";
+              font-weight: 400;
+
+              .upload-file-content {
+                display: flex;
+                flex-direction: column;
+                margin-left: 15px;
+                .upload-file-title {
+                  font-size: 13px;
+                  color: $primary-color;
+                  margin-bottom: 5px;
+                }
+                .upload-file-time {
+                  font-size: 10px;
+                  color: #718ebf;
+                }
+              }
+
+              .upload-file-size {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+
+      // file-manager
+      .file-manager {
+        .file-manager-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .edit-icon {
+            font-size: 32px;
+            cursor: pointer;
+          }
+        }
+
+        .file-manager-area {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 26px;
+          .single-file-manager {
+            border-radius: 8.994px;
+            background: #ebedfb;
+            padding: 16px 14px;
+            .file-manager-icon {
+              font-size: 17px;
+            }
+            .file-manager-content {
+              display: flex;
+              flex-direction: column;
+              font-family: "Sofia Pro";
+              font-weight: 400;
+              margin-top: 10px;
+              .file-manager-title {
+                font-size: 13px;
+                color: black;
+                margin-bottom: 6px;
+              }
+              .file-manager-time {
+                font-size: 12px;
+                color: #757575;
+              }
+            }
+          }
+        }
+
+        .file-manager-btn {
+          width: 100%;
+          border-radius: 5px;
+          background: #dee1e6;
+          padding: 20px 30px;
+          border: none;
+          font-size: 14px;
+          font-family: "Sofia Pro";
+          font-weight: 400;
+          margin-top: 23px;
+          color: #51459e;
+          cursor: pointer;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+    /* ============== file container style end =============== */
+  }
+}
+/* ============== middle part style end =============== */
+
+/* ============== main section style end ============== */
