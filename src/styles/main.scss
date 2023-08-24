@@ -457,6 +457,7 @@ ul {
 /* ============== main section style start ============== */
 .main .container {
   display: flex;
+  flex-direction: column;
 }
 
 /* ============== left side bar style start ============== */
@@ -596,7 +597,7 @@ ul {
 .middle-content {
   // max-width: 800px;
   width: 100%;
-  // padding: 30px 0;
+  padding: 30px 0;
 
   .middle-content-area {
     /* =========== folders style start ============== */
@@ -605,11 +606,13 @@ ul {
       align-items: center;
       // justify-content: center;
       gap: 25px;
-      overflow-x: auto;
-      padding-bottom: 60px;
+      // overflow: hidden;
+      padding-bottom: 70px;
+      // width: 700px;
+      overflow: auto;
 
       .folder {
-        min-width: 193px;
+        max-width: 193px;
         width: 100%;
         display: flex;
         flex: 1;
@@ -618,6 +621,7 @@ ul {
         gap: 20px;
         padding: 24px 21px;
         border-radius: 10px;
+        flex-shrink: 0;
 
         .folder-header {
           display: flex;
@@ -701,6 +705,7 @@ ul {
     .quick-access {
       margin-bottom: 60px;
       overflow: auto;
+      background: transparent;
       .quick-access-area {
         width: 800px;
         // width: 100%;
@@ -879,7 +884,46 @@ ul {
   width: 100%;
   .right-part-area {
     .chart {
-      height: 300px;
+      display: block;
+      font-family: "Sofia Pro";
+      font-weight: 400;
+      font-size: 10px;
+      padding-bottom: 60px;
+      .chart-title {
+        font-size: 20px;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 700;
+        padding-bottom: 60px;
+        padding-top: 45px;
+      }
+      .y-axis {
+        display: flex;
+        align-items: end;
+        .view-items {
+          display: flex;
+          flex-direction: column;
+          row-gap: 15px;
+          color: #000;
+          opacity: 0.5;
+        }
+
+        .bars {
+          display: flex;
+          align-items: end;
+          height: 100%;
+          max-width: 300px;
+          width: 100%;
+          column-gap: 5px;
+          padding-left: 10px;
+        }
+      }
+
+      .x-axis {
+        display: flex;
+        column-gap: 30px;
+        padding-left: 45px;
+        margin-top: 15px;
+      }
     }
     .files-area {
       .files {
@@ -900,9 +944,11 @@ ul {
     }
 
     .invite-now {
+      // display: none;
       width: 100%;
       position: relative;
       margin-top: 15px;
+      height: 100%;
       .inner-border {
         position: absolute;
         width: 100%;
@@ -928,6 +974,7 @@ ul {
         font-family: "Sofia Pro";
         font-weight: 400;
         .invite-title {
+          // display: none;
           max-width: 170px;
           font-family: inherit;
           font-weight: inherit;

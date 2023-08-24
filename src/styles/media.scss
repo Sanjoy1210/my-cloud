@@ -72,8 +72,12 @@
     }
   }
 
-  .upload-manage {
-    gap: 85px;
+  .middle-content {
+    .middle-content-area {
+      .upload-manage {
+        gap: 85px;
+      }
+    }
   }
 }
 
@@ -99,9 +103,6 @@
   .header {
     padding: 27px 0;
     .header-area {
-      .drawer-bnt {
-        display: none;
-      }
       .filter-area {
         margin: 0 30px 0 20px;
       }
@@ -115,8 +116,12 @@
     }
   }
 
+  .main .container {
+    flex-direction: row;
+  }
+
   .left-part {
-    display: block;
+    display: none;
     max-width: 175px;
 
     .left-part-area {
@@ -147,23 +152,56 @@
   }
 
   .middle-content {
-    max-width: 800px;
-    // padding: 30px 0 30px 30px;
+    // max-width: 700px;
+    width: 65%;
+    padding: 30px 0;
 
-    .upload-manage {
-      width: 710px;
+    .middle-content-area {
+      .upload-manage {
+        // width: 710px;
+        gap: 30px;
+      }
+    }
+  }
+
+  .right-part {
+    width: 35%;
+    padding-bottom: 20px;
+    .right-part-area {
+      padding: 0 20px;
+
+      .invite-now {
+        margin-top: 20px;
+        .inner-border {
+          display: none;
+        }
+        .invite-now-area {
+          left: 0;
+          img {
+            width: 100%;
+          }
+        }
+        .invite-content {
+          left: 0;
+          padding: 15px;
+        }
+      }
     }
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1300px) {
   .container {
     // max-width: 1280px;
+    width: 100%;
     padding: 0 20px;
   }
 
   .header {
     .header-area {
+      .drawer-bnt {
+        display: none;
+      }
       gap: 60px;
       .logo {
         padding-left: 22px;
@@ -193,13 +231,19 @@
     }
   }
   .left-part {
-    max-width: 220px;
+    display: block;
+    max-width: 230px;
+    width: 100%;
 
     .left-part-area {
       // height: 380px;
       // overflow: auto;
+      .top-menu,
       .bottom-menu {
-        gap: 30px;
+        row-gap: 20px;
+        column-gap: 10px;
+      }
+      .bottom-menu {
         padding-top: 60px;
         padding-bottom: 115px;
       }
@@ -217,11 +261,53 @@
       }
     }
   }
+
+  .middle-content {
+    max-width: 730px;
+    padding: 30px 0 20px 20px;
+
+    .middle-content-area {
+      .folders {
+        // width: 720px;
+        .folder {
+          min-width: 193px;
+        }
+      }
+      .upload-manage {
+        gap: 55px;
+        max-width: 670px;
+      }
+    }
+  }
+
+  .right-part {
+    width: 90%;
+    .right-part-area {
+      padding: 0 20px;
+
+      .invite-now {
+        margin-top: 20px;
+        .inner-border {
+          display: block;
+        }
+        .invite-now-area {
+          left: -45px;
+          // img {
+          //   width: 100%;
+          // }
+        }
+        .invite-content {
+          left: -45px;
+          padding: 20px;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1500px) {
   .container {
-    max-width: 1400px;
+    max-width: 1440px;
     width: 100%;
     margin: 0 auto;
   }
@@ -288,9 +374,9 @@
     }
 
     .space-area {
-      max-width: 210px;
+      max-width: 190px;
       padding: 0;
-      padding-left: 10px;
+
       margin: 0;
       .used-space {
         font-size: 14px;
@@ -310,8 +396,16 @@
 
     .middle-content-area {
       .upload-manage {
-        width: 710px;
+        max-width: 710px;
+        gap: 85px;
       }
+    }
+  }
+
+  .right-part {
+    .right-part-area {
+      padding-left: 30px;
+      padding-right: 0;
     }
   }
 }
@@ -334,15 +428,16 @@
       }
     }
     .space-area {
-      // max-width: 195px;
+      max-width: 210px;
       width: 100%;
+      padding-left: 10px;
       // margin: auto;
     }
   }
 
-  .right-part {
-    .right-part-area {
-      padding: 0 30px;
-    }
-  }
+  // .right-part {
+  //   .right-part-area {
+  //     padding: 0 30px;
+  //   }
+  // }
 }
