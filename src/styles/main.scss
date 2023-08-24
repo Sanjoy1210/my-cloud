@@ -52,32 +52,34 @@ ul {
 }
 
 // scrollbar
-// ::-webkit-scrollbar {
-//   display: none;
-// }
+::-webkit-scrollbar {
+  display: none;
+}
 
+/* width */
 .scrollbar::-webkit-scrollbar {
   width: 3px;
   height: 3px;
 }
 
+/* Track */
 .scrollbar::-webkit-scrollbar-track {
-  background: #ddd;
+  background: #f1f1f1;
 }
 
+/* Handle */
 .scrollbar::-webkit-scrollbar-thumb {
-  overflow-y: auto;
-  scrollbar-color: $light-gray #ddd;
-  scrollbar-width: 3px;
+  background: #888;
+}
 
-  &:hover {
-    background: $bright-gray;
-  }
+/* Handle on hover */
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .overlay {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   left: 0;
   top: 0;
@@ -139,10 +141,56 @@ ul {
 
 .section-title {
   font-family: "Sofia Pro";
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 500;
   color: $primary-color;
   margin-bottom: 20px;
+}
+
+// similar files
+.files-area {
+  width: 100%;
+  .files {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    .file {
+      display: flex;
+      align-items: center;
+
+      .file-icon {
+        width: 44px;
+        height: 44px;
+      }
+      .file-info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: "Sofia Pro";
+        font-weight: 400;
+
+        .file-content {
+          display: flex;
+          flex-direction: column;
+          margin-left: 14px;
+          .file-title {
+            font-size: 13px;
+            color: $primary-color;
+            margin-bottom: 5px;
+          }
+          .file-subtitle {
+            font-size: 10px;
+            color: #718ebf;
+          }
+        }
+
+        .file-more-info {
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }
 
 /* ============== header style start ============= */
@@ -490,6 +538,7 @@ ul {
   // }
 
   .menu {
+    max-width: 77px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -545,9 +594,9 @@ ul {
 
 /* ============== middle part style start =============== */
 .middle-content {
-  max-width: 800px;
+  // max-width: 800px;
   width: 100%;
-  padding: 30px 0 30px 30px;
+  // padding: 30px 0;
 
   .middle-content-area {
     /* =========== folders style start ============== */
@@ -556,7 +605,7 @@ ul {
       align-items: center;
       // justify-content: center;
       gap: 25px;
-      // overflow-x: scroll;
+      overflow-x: auto;
       padding-bottom: 60px;
 
       .folder {
@@ -567,7 +616,7 @@ ul {
         flex-direction: column;
         justify-content: center;
         gap: 20px;
-        padding: 20px;
+        padding: 24px 21px;
         border-radius: 10px;
 
         .folder-header {
@@ -651,11 +700,14 @@ ul {
     /* =========== quick access style start ============ */
     .quick-access {
       margin-bottom: 60px;
+      overflow: auto;
       .quick-access-area {
-        width: 100%;
+        width: 800px;
+        // width: 100%;
         display: flex;
         align-items: center;
         gap: 18px;
+        // overflow-x: scroll;
 
         .access {
           max-width: 226px;
@@ -701,57 +753,59 @@ ul {
 
     /* ============== file container style start =============== */
     .upload-manage {
-      width: 710px;
+      // width: 710px;
+      width: 100%;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 85px;
+      grid-template-columns: repeat(1, 1fr);
+      // gap: 85px;
+      gap: 40px;
       // align-items: center;
       // justify-content: space-between;
-      // recently uploaded
-      .recently-uploaded {
-        width: 100%;
-        .uploaded-files {
-          display: flex;
-          flex-direction: column;
-          gap: 17px;
-          .upload-file {
-            display: flex;
-            align-items: center;
+      // // recently uploaded
+      // .recently-uploaded {
+      //   width: 100%;
+      //   .uploaded-files {
+      //     display: flex;
+      //     flex-direction: column;
+      //     gap: 17px;
+      //     .upload-file {
+      //       display: flex;
+      //       align-items: center;
 
-            .upload-img {
-              width: 44px;
-              height: 44px;
-            }
-            .upload {
-              width: 100%;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              font-family: "Sofia Pro";
-              font-weight: 400;
+      //       .upload-img {
+      //         width: 44px;
+      //         height: 44px;
+      //       }
+      //       .upload {
+      //         width: 100%;
+      //         display: flex;
+      //         align-items: center;
+      //         justify-content: space-between;
+      //         font-family: "Sofia Pro";
+      //         font-weight: 400;
 
-              .upload-file-content {
-                display: flex;
-                flex-direction: column;
-                margin-left: 15px;
-                .upload-file-title {
-                  font-size: 13px;
-                  color: $primary-color;
-                  margin-bottom: 5px;
-                }
-                .upload-file-time {
-                  font-size: 10px;
-                  color: #718ebf;
-                }
-              }
+      //         .upload-file-content {
+      //           display: flex;
+      //           flex-direction: column;
+      //           margin-left: 15px;
+      //           .upload-file-title {
+      //             font-size: 13px;
+      //             color: $primary-color;
+      //             margin-bottom: 5px;
+      //           }
+      //           .upload-file-time {
+      //             font-size: 10px;
+      //             color: #718ebf;
+      //           }
+      //         }
 
-              .upload-file-size {
-                font-size: 12px;
-              }
-            }
-          }
-        }
-      }
+      //         .upload-file-size {
+      //           font-size: 12px;
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
 
       // file-manager
       .file-manager {
@@ -769,7 +823,8 @@ ul {
         .file-manager-area {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 26px;
+          // gap: 26px;
+          gap: 18px;
           .single-file-manager {
             border-radius: 8.994px;
             background: #ebedfb;
@@ -818,5 +873,88 @@ ul {
   }
 }
 /* ============== middle part style end =============== */
+
+/* =============== right part style start =============== */
+.right-part {
+  width: 100%;
+  .right-part-area {
+    .chart {
+      height: 300px;
+    }
+    .files-area {
+      .files {
+        .file {
+          width: 100%;
+          .file-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: #dee1e6;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    .invite-now {
+      width: 100%;
+      position: relative;
+      margin-top: 15px;
+      .inner-border {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        border: 1px dashed #d0c9ff;
+        background: #f6f4ff;
+        z-index: -1;
+        top: 33px;
+      }
+      .invite-now-area {
+        width: 100%;
+        background: #51459e;
+        border-radius: 10px;
+        position: relative;
+        left: -45px;
+      }
+      .invite-content {
+        position: absolute;
+        top: 0;
+        left: -45px;
+        padding: 20px;
+        font-family: "Sofia Pro";
+        font-weight: 400;
+        .invite-title {
+          max-width: 170px;
+          font-family: inherit;
+          font-weight: inherit;
+          font-size: 16px;
+          color: #dee1e6;
+          line-height: 1.4;
+          margin-bottom: 10px;
+        }
+        .invite-now-btn {
+          background: $light-green;
+          padding: 10px 20px;
+          font-family: inherit;
+          font-weight: inherit;
+          font-size: 14px;
+          border-radius: 5px;
+          color: #51459e;
+          border: none;
+          cursor: pointer;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+/* =============== right part style end =============== */
 
 /* ============== main section style end ============== */

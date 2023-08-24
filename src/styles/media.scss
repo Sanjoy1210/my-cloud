@@ -28,6 +28,22 @@
   .container {
     // max-width: 610px;
   }
+
+  .middle-content {
+    .middle-content-area {
+      .upload-manage {
+        // width: 710px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+
+        .file-manager {
+          .file-manager-area {
+            gap: 26px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -54,6 +70,10 @@
         }
       }
     }
+  }
+
+  .upload-manage {
+    gap: 85px;
   }
 }
 
@@ -125,6 +145,15 @@
       }
     }
   }
+
+  .middle-content {
+    max-width: 800px;
+    // padding: 30px 0 30px 30px;
+
+    .upload-manage {
+      width: 710px;
+    }
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -157,6 +186,11 @@
     max-width: 190px;
     margin: auto;
     padding-right: 10px;
+    .used-space {
+      .progress-line {
+        margin-bottom: 60px;
+      }
+    }
   }
   .left-part {
     max-width: 220px;
@@ -179,7 +213,7 @@
       }
 
       .menu-title {
-        font-size: 15px;
+        font-size: 12px;
       }
     }
   }
@@ -187,7 +221,8 @@
 
 @media screen and (min-width: 1400px) {
   .container {
-    // max-width: 1350px;
+    max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -218,13 +253,14 @@
     .left-part-area {
       // height: 500px;
       // overflow: auto;
-      .top-menu {
-        gap: 30px;
+      .top-menu,
+      .bottom-menu {
+        row-gap: 20px;
+        column-gap: 30px;
       }
 
       .bottom-menu {
-        gap: 30px;
-        padding-top: 110px;
+        padding-top: 60px;
         padding-bottom: 110px;
       }
     }
@@ -247,7 +283,7 @@
         }
       }
       .menu-title {
-        font-size: 17px;
+        font-size: 12px;
       }
     }
 
@@ -267,11 +303,22 @@
       }
     }
   }
+
+  .middle-content {
+    max-width: 800px;
+    padding: 30px 0 30px 30px;
+
+    .middle-content-area {
+      .upload-manage {
+        width: 710px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1920px) {
   .container {
-    max-width: 1440px;
+    max-width: 1480px;
   }
 
   .left-part {
@@ -282,13 +329,20 @@
 
       .top-menu,
       .bottom-menu {
-        gap: 30px;
+        row-gap: 20px;
+        column-gap: 30px;
       }
     }
     .space-area {
       // max-width: 195px;
       width: 100%;
       // margin: auto;
+    }
+  }
+
+  .right-part {
+    .right-part-area {
+      padding: 0 30px;
     }
   }
 }
