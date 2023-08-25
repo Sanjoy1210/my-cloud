@@ -1,4 +1,33 @@
 @media screen and (min-width: 411px) {
+  .right-part {
+    .right-part-area {
+      .chart {
+        .y-axis {
+          .bars {
+            column-gap: 10px;
+          }
+        }
+        .x-axis {
+          column-gap: 40px;
+        }
+      }
+      .invite-now {
+        // max-width: 350px;
+        height: 250px;
+        .invite-now-area {
+          height: 100%;
+          img {
+            height: 100%;
+          }
+        }
+        .invite-content {
+          padding: 0;
+          left: 10%;
+          top: 25%;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 540px) {
@@ -19,6 +48,21 @@
       }
       .user-area {
         gap: 20px;
+      }
+    }
+  }
+
+  .right-part {
+    .right-part-area {
+      .chart {
+        .y-axis {
+          .bars {
+            column-gap: 20px;
+          }
+        }
+        .x-axis {
+          column-gap: 60px;
+        }
       }
     }
   }
@@ -170,20 +214,35 @@
     .right-part-area {
       padding: 0 20px;
 
+      .chart {
+        .y-axis {
+          .bars {
+            column-gap: 5px;
+          }
+        }
+        .x-axis {
+          column-gap: 30px;
+        }
+      }
+
       .invite-now {
+        height: 100%;
         margin-top: 20px;
+        padding-bottom: 0;
         .inner-border {
           display: none;
         }
         .invite-now-area {
+          height: 128px;
           left: 0;
           img {
             width: 100%;
           }
         }
         .invite-content {
-          left: 0;
-          padding: 15px;
+          top: 10%;
+          left: 5%;
+          padding: 0;
         }
       }
     }
@@ -285,18 +344,28 @@
     .right-part-area {
       padding: 0 20px;
 
+      .chart {
+        .y-axis {
+          .bars {
+            column-gap: 5px;
+          }
+        }
+      }
+
       .invite-now {
         margin-top: 20px;
         .inner-border {
           display: block;
         }
         .invite-now-area {
+          height: 128px;
           left: -45px;
           // img {
           //   width: 100%;
           // }
         }
         .invite-content {
+          top: 0;
           left: -45px;
           padding: 20px;
         }
